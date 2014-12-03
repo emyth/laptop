@@ -71,6 +71,7 @@ What it sets up
 [Qt]: http://qt-project.org/
 [Rails]: http://rubyonrails.org/
 [Rbenv]: https://github.com/sstephenson/rbenv
+[Rvm]: http://rvm.io
 [Redis]: http://redis.io/
 [Ruby Build]: https://github.com/sstephenson/ruby-build
 [Ruby]: https://www.ruby-lang.org/en/
