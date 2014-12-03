@@ -219,6 +219,13 @@ else
   fancy_echo "rcm already installed. Skipping ..."
 fi
 
+fancy_echo "Installing pathogen ..."
+if [[ ! -d "$HOME/.vim" ]]; then
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
+
+
 fancy_echo "Installing your personal additions from ~/.laptop.local ..."
   if [[ -f ~/.laptop.local ]]; then
     source ~/.laptop.local
