@@ -151,6 +151,13 @@ fancy_echo "Installing NVM, Node.js, and NPM, for running apps and installing Ja
 fancy_echo "Starting Postgres ..."
   brew_launchctl_restart postgresql
 
+if [[ ! -d "$HOME/.rvm" ]]; then
+  fancy_echo "Installing rvm, to change Ruby versions ..."
+    \curl -sSL https://get.rvm.io | bash -s stable
+
+    append_to_zshrc 'export PATH="$HOME/.rvm/bin:$PATH"'
+fi
+
 if [[ ! -d "$HOME/.rbenv" ]]; then
   fancy_echo "Installing rbenv, to change Ruby versions ..."
     git clone https://github.com/sstephenson/rbenv.git "$HOME/.rbenv"
